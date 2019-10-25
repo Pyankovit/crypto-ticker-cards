@@ -2,6 +2,7 @@ import React from 'react';
 import Tickers from './Components/Tickers';
 import './App.css';
 
+
 function App() {
   return (
     <div className="App">

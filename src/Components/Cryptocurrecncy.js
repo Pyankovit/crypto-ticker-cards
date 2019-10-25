@@ -1,24 +1,21 @@
 
-import React, { Component } from 'react'
+import React from 'react';
+import { storedData } from './data.js';
 
-export default class Cryptocurrecncy extends Component {
-    render() {
+export default function Cryptocurrecncy () {
         let {
             id,
             name,
             symbol,
             price_usd,
-        }=this.props.data;
-
+        }=storedData;
+        console.log('govno')
         return (
-            <div>
                 <li className={"cryptocurrency "+id}>
                     <p className="cryptocurrency-name">{name} {" "}({symbol})</p>
                     <h1>${(+price_usd).toFixed(2)}</h1>
                 </li>
-            </div>
         )
-    }
 }
 
 

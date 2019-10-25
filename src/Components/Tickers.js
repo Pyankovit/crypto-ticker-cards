@@ -1,58 +1,42 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect  } from 'react';
 import Cryptocurrency from './Cryptocurrecncy';
-import SortableSelect from './SortableSelect';
 import './Tickers.css';
 import axios from 'axios';
+import ExampleSelect from './exampleSelect';
 import { SortableContainer } from 'react-sortable-hoc';
-
-export default class Tickers extends Component {
-    state={
-        wanted:["bitcoin", "ethereum", "ripple"],
-        data:[
-            { 
-                id: "bitcoin",
-                name: "Bitcoin",
-                symbol: "BTC",
-                price_usd: "1",
-            }
-        ]
-    }
-    fetchCryptoData(){
-        axios.get("https://api.coinmarketcap.com/v1/ticker/")
-        .then(response=>{ 
-             let filteredResult=response.data.filter(currency=>this.state.wanted.includes(currency.id)||this.state.wanted.includes(currency.symbol));
-             let wantedResult=response.data.filter(currency=>currency.id);
-             this.setState({data: filteredResult});
-             console.log(filteredResult);
-             console.log(wantedResult);
-             console.log(this.state);
-        })
-        .catch(err=>console.log(err));
-    }
-
-    componentDidMount() {
-        this.fetchCryptoData();
-
-        //this.interval=setTimeout(()=>this.fetchCryptoData(), 1*1000);
-    }
+import { storedData } from './data.js';
 
 
-    
+export default function Tickers() {
+    const [data, setData] = useState({ hits: [] });
+    const [query, setQuery] = useState('react');
+    const [wanted, setWanted]= useState(["bitcoin", "ethereum", "ripple"]);
 
-    render() {
-        let tickers=this.state.data.map((currency)=>
-        <Cryptocurrency data={currency} key={currency.id}/>);
-        let cryptoDataSelect=this.state.data.map((currency)=>
-        <SortableSelect data={currency} key={currency.id}/>);
-        
-        return (
-            <div className="tickers-containers">
-            <SortableSelect/>
+    useEffect(() => {
+        let ignore = false;
+        async function fetchData(){
+            const result = await axios.get("https://api.coinmarketcap.com/v1/ticker/");
+            //const filteredResult=(result)=>result.filter(currency=>wanted.includes(currency.id)||wanted.includes(currency.symbol));
+            localStorage.setItem("allData", JSON.stringify(result.data));
+            const storedData = JSON.parse(localStorage.getItem("allData"));
+            if (!ignore) setData(storedData);
+            console.log(result.data);
+            console.log(storedData);
+            //console.log(idList);
+        }
+        fetchData();
+        return () => { ignore = true; }
+      }, [query]);
+
+      let tickers=()=>storedData.map((currency)=><Cryptocurrency data={currency} key={currency.id}/>);
+      return (
+          <div className="tickers-containers">
+                <ExampleSelect/>
                 <ul className="tickers">{tickers}</ul>
                     <p>
                         Информация обновляется каждые 10 секунд
                     </p>
             </div>
-        );
-    }
+        )
+    
 }

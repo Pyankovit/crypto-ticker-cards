@@ -1,10 +1,10 @@
 import React from 'react';
-
 import Select from 'react-select';
-import { colourOptions } from './data.js';
+import { storedData } from './data.js';
 
 export default () => (
-  <Select
+  <Select 
+    defaultValue={[storedData[2], storedData[3]]}
     isMulti
     name="colors"
     options={storedData}
