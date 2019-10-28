@@ -3,3 +3,17 @@
     padding: 0;
     display: inline-flex;
 }
+
+.selected-options{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  height: 400px;
+  
+}
+
+.cryptocurrency{
+    margin: 10px;
+    border: 1px solid black;
+    width: 300px;
+}
