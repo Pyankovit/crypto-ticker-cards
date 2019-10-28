@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/crypto-ticker-cards/static/css/main.bc1d4070.chunk.css",
-    "main.js": "/crypto-ticker-cards/static/js/main.6c3ea6d8.chunk.js",
-    "main.js.map": "/crypto-ticker-cards/static/js/main.6c3ea6d8.chunk.js.map",
-    "runtime-main.js": "/crypto-ticker-cards/static/js/runtime-main.95d38aa5.js",
-    "runtime-main.js.map": "/crypto-ticker-cards/static/js/runtime-main.95d38aa5.js.map",
-    "static/js/2.110cd2e3.chunk.js": "/crypto-ticker-cards/static/js/2.110cd2e3.chunk.js",
-    "static/js/2.110cd2e3.chunk.js.map": "/crypto-ticker-cards/static/js/2.110cd2e3.chunk.js.map",
+    "main.js": "/crypto-ticker-cards/static/js/main.c46828bf.chunk.js",
+    "main.js.map": "/crypto-ticker-cards/static/js/main.c46828bf.chunk.js.map",
+    "runtime-main.js": "/crypto-ticker-cards/static/js/runtime-main.67b0e724.js",
+    "runtime-main.js.map": "/crypto-ticker-cards/static/js/runtime-main.67b0e724.js.map",
+    "static/js/2.0bd2971f.chunk.js": "/crypto-ticker-cards/static/js/2.0bd2971f.chunk.js",
+    "static/js/2.0bd2971f.chunk.js.map": "/crypto-ticker-cards/static/js/2.0bd2971f.chunk.js.map",
     "index.html": "/crypto-ticker-cards/index.html",
-    "precache-manifest.7fd2ce433ab7f9bcf780f5b21e6049f7.js": "/crypto-ticker-cards/precache-manifest.7fd2ce433ab7f9bcf780f5b21e6049f7.js",
+    "precache-manifest.13cb2ded28163e2fcb378fdd793ed23e.js": "/crypto-ticker-cards/precache-manifest.13cb2ded28163e2fcb378fdd793ed23e.js",
     "service-worker.js": "/crypto-ticker-cards/service-worker.js",
     "static/css/main.bc1d4070.chunk.css.map": "/crypto-ticker-cards/static/css/main.bc1d4070.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.95d38aa5.js",
-    "static/js/2.110cd2e3.chunk.js",
+    "static/js/runtime-main.67b0e724.js",
+    "static/js/2.0bd2971f.chunk.js",
     "static/css/main.bc1d4070.chunk.css",
-    "static/js/main.6c3ea6d8.chunk.js"
+    "static/js/main.c46828bf.chunk.js"
   ]
 }
