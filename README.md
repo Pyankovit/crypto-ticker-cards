@@ -1,68 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Тестовое задание Adraba
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+В рамках тестового задания нужно разработать одностраничное мини приложение для поиска криптовалют и добавления некоторых из них в список отслеживаемых.
+Интерфейс должен состоять из поля ввода, списка результатов поиска и списка сохраненных в отслеживаемые криптовалют. По каждой криптовалюте нужно отобразить ее название, символ, и текущую цену. 
+При добавлении криптовалюты в отслеживаемые нужно добавить возможность, чтобы при обновлении страницы данные не исчезали из списка. Также должна быть возможность удалить криптовалюту из списка, а также должна отображаться актуальная цена на момент захода на страницу.
+Запрос на получение списка должен уходить на API во время печатания в поле ввода и выводить не более 10 первых наименований. Интерфейс не предусматривает никаких запросов поиска по нажатию на кнопку. После получения результата мы можем выбрать со списка криптовалюту и добавить в отслеживаемые. 
+Поиск может быть как по имени, так и по символу криптовалюты одновременно. Если мы хотим добавить криптовалюту, которая уже есть в списке, нужно уведомить юзера подсветкой на секунду, что уже есть такая криптовалюта в отслеживаемых.
+Будет плюсом: реализовать возможность сортировки, фильтрации по разным параметрам отслеживаемых криптовалют.
+Для получения данных можно использовать любую открытую API
+https://medium.com/coinmonks/best-crypto-apis-for-developers-5efe3a597a9f
+Например: https://coinmarketcap.com/api/documentation/v1/ 
+Для написания приложения используем React.
+Будем плюсом если будете использовать в приложении: Redux, Typescript, RxJS, Styled-components, Antd design UI, Jest, Ramda
